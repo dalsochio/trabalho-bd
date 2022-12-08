@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block tela %} 
+<b>Espaço do usuário</b> 
+{% endblock %}
+
+{% block main %}
+<div class="bg-blue-400 p-5"> 
+  <div class="group flex items-center">
+    <h1 class="text-7xl">👨🏻</h1>
+      <div class="ltr:ml-3 rtl:mr-3">
+          <p class="text-sm font-medium text-slate-300 text-black font-bold px-1">Olá, {{ usuario.nome }}</p>
+          <p class="text-sm font-medium text-slate-300 text-black font-bold px-1">Veículo: {TIPO DO USUÁRIO}</p>
+        <p class="text-sm font-medium text-slate-300 text-black font-bold px-1"><a href="/sair"><u>Sair</u></a></p>
+      </div>
+  </div>
+</div>
+<div class="text-5xl bg-blue-700 m-5 h-50 w-70 hover:bg-blue-500 rounded-lg">
+    <a href="/usuario/informacao">
+      <div class="group flex ">
+        <h1 class="text-5xl px-4 py-4">🧾
+           <p class="text-xl font-larger text-white font-bold px-2 py-1">Infomações do Usuário</p>
+        </h1>
+      </div> 
+    </a>
+</div>
+<div class="text-5xl bg-amber-600 hover:bg-amber-500 m-5 h-50 w-70 rounded-lg">
+    <a href="/usuario/carteira">
+      <div class="group flex ">
+        <h1 class="text-5xl px-4 py-4">👜
+           <p class="text-xl font-larger text-white font-bold px-2 py-1">Carteira</p>
+        </h1>
+      </div> 
+    </a>
+</div>
+
+<div class="text-5xl  bg-emerald-700 hover:bg-emerald-600 m-5 h-50 w-70 rounded-lg">
+  <a href="/usuario/historico">
+    <div class="group flex ">
+      <h1 class="text-5xl px-4 py-4">🔁
+        <p class="text-xl font-larger text-white font-bold px-2 py-1">Historico</p>
+      </h1>
+    </div>
+  </a>
+</div>
+
+
+{% if usuario.tipo == 2 %}
+<div class="text-5xl bg-rose-600 hover:bg-rose-500 m-5 h-50 w-70 rounded-lg">
+  <a href="/usuario/adm">
+    <div class="group flex ">
+      <h1 class="text-5xl px-4 py-4">📑
+        <p class="text-xl font-larger text-white font-bold px-2 py-1">Administrador de Estacionamento</p>
+      </h1>
+    </div>
+  </a>
+</div>
+{% endif %}
+
+
+{% endblock %}

@@ -1,0 +1,60 @@
+
+.orangewomanstep2{
+  display:none;
+}
+.orangewomanstep3{
+  display:none;
+}
+.orangewomanstep4{
+  display:none;
+}
+.orangewomanstep5{
+  display:none;
+}
+.orangewomanstep6{
+  display:none;
+}
+.orangewomanstep7{
+  display:none;
+}
+.orangewomanstep8{
+  display:none;
+}
+
+@keyframes walkanim {
+  to { background-position: 100% 0; }
+}
+
+.gcar {
+  animation: rideg 4s infinite linear;
+}
+.ycar {
+  animation: ridey 12s infinite linear;
+}
+.ocar {
+  animation: rideo 9s infinite linear;
+}
+@keyframes rideg {
+  0% {
+    transform: scale(0.2) translate3d(-100%, 355%, 0);
+  } /*start x(left), y(right), z(up or down if negative)*/
+  100% {
+    transform: scale(0.2) translate3d(800%, 355%, 0);
+  } /*ends*/
+}
+@keyframes ridey {
+  0% {
+    transform: scale(0.2) translate3d(-100%, 380%, 0);
+  } /*start x(left), y(right), z(up or down if negative)*/
+  100% {
+    transform: scale(0.2) translate3d(800%, 380%, 0);
+  } /*ends*/
+}
+@keyframes rideo {
+  0% {
+    transform: scale(0.2) translate3d(-100%, 365%, 0);
+  } /*start x(left), y(right), z(up or down if negative)*/
+  100% {
+    transform: scale(0.2) translate3d(800%, 365%, 0);
+  } /*ends*/
+}

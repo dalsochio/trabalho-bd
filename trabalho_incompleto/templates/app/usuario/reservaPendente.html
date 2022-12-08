@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+
+{% block tela %} 
+<b>Reservas Pendentes</b> 
+{% endblock %}
+{% block main %}
+<div class="bg-fuchsia-800">
+  <div class="grid grid-cols-1 gap-1">
+    <div>
+        <h1 class="text-7xl px-4 py-4">✅
+           <p class="text-xl font-larger text-white font-bold px-3 py-2">Reservas
+          </p>
+        </h1>
+    </div>
+    <div class="bg-purple-400 hover:bg-purple-500 m-2 h-10 w-30 rounded-lg">
+      <a href="/usuario/reservaConfirmada">
+        <p class="text-white font-bold px-2 py-2">Confirmados
+        </p>
+      </a>
+    </div>
+    <div class=" bg-purple-400 hover:bg-purple-500 m-2 h-10 w-30 rounded-lg">
+      <a href="/usuario/reservaRecusada">
+       <p class="text-white font-bold px-2 py-2">Recusadas
+       </p>
+      </a>
+    </div>
+    <div class=" bg-purple-600 m-2 h-10 w-30 rounded-lg">
+      <a href="/usuario/reservaPendente">
+         <p class="text-white font-bold px-2 py-2">Pendentes
+         </p>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="text-5xl bg-purple-400"></div>
+  <div class="text-5xl bg-slate-200 m-5 h-50 w-70 rounded-lg">
+      <div class="group flex ">
+        <div class="text-5xl px-4 py-4"> 
+          <p class="text-xl font-larger font-bold px-3 py-2">Informações:
+          </p>
+          <p class="text-xl font-larger font-bold px-3 py-2">Status: {$aceito ou não}
+          </p>
+      <div class="p-5"> 
+        <div class="ltr:ml-3 rtl:mr-3">
+          <ul class="list-insade">
+            <li class="text-xl font-medium text-slate-300 text-black font-bold px-1">Nome:
+            </li>
+            <li class="text-xl font-medium text-slate-300 text-black font-bold px-1">CPF:
+            </li>
+            <li class="text-xl font-medium text-slate-300 text-black font-bold px-1">E-mail:
+            </li>
+            <li class="text-xl font-medium text-slate-300 text-black font-bold px-1">Contato:
+            </li>
+            <li class="text-xl font-medium text-slate-300 text-black font-bold px-1">Veiculo:
+            </li>
+          </ul>
+      </div>
+    </div>
+    <div >
+      <button class="rounded-full bg-blue-600 text-base text-white w-20">Aceitar
+      </button>
+      <button class="rounded-full bg-red-600 text-base text-white w-20">Recusar
+      </button>
+    </div>
+          </div>
+      </div>    
+</div>
+    
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+
+{% block tela %} 
+<b>Estacionamentos Cadastrados</b> 
+{% endblock %}
+{% block main %}
+<div class="bg-blue-700">
+  <div class="grid grid-cols-4 gap-4">
+    <div>
+      <h1 class="text-7xl px-4 py-4">📋
+       <p class="text-xl font-larger text-white font-bold px-3 py-2">Estacionamentos Cadastrados</p>
+      </h1>
+  </div>
+ </div>
+</div>
+<div class="text-5xl bg-slate-200 m-5 h-50 w-70 rounded-lg">  
+  <div class="group flex ">
+    <div class="text-5xl px-4 py-4"> 
+           <div class="p-5"> 
+              <div class="ltr:ml-3 rtl:mr-3">
+                <ul class="list-insade">
+                  <li class="text-xl font-medium text-slate-300 text-black font-bold px-1">Empresa:
+                  </li>
+                  <li class="text-xl font-medium text-slate-300 text-black font-bold px-1">Contato:
+                  </li>
+                 <li class="text-xl font-medium text-slate-300 text-black font-bold px-1">E-mail:
+                 </li>
+                <li class="text-xl font-medium text-slate-300 text-black font-bold px-1">Endereço:
+                </li>
+                </ul>
+              </div>
+          </div>
+      <div>
+        <button class="rounded-full bg-red-600 text-base text-white w-20">Excluir
+        </button>
+        <button class="rounded-full bg-blue-600 text-base text-white w-20">Editar
+        </button>
+      </div>
+     </div>
+   </div> 
+</div>
+
+
+{% endblock %}

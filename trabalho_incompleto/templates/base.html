@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>ESTACIONEI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+		<link rel="stylesheet" href="/assets/css/style.css">
+    {% block extra_style %}
+    {% endblock %}
+    <script src="https://cdn.tailwindcss.com"></script>
+		<script src="/assets/js/script.js" defer></script>
+    <script>
+      tailwind.config = {
+      darkMode: "class"
+    }
+    </script>
+    
+	</head>
+
+	<body class="sm:w-full md:w-full lg:w-[500px] xl:w-[500px] mx-auto bg-gray-500">
+    <div id="tela" class="block sm:w-screen md:w-screen lg:w-full xl:w-full h-screen">
+    {% include "nav.html" %}
+		<main class="bg-white bg-gray-100 dark:bg-gray-700 dark:text-white h-full	overflow-x-auto"> 
+      <div id="titulo" class="w-full h-[45px] grid grid-cols-6 bg-blue-800 text-white px-4 items-center sticky top-0">
+        <div class="col-span-2 cursor-pointer" onclick="window.history.back()">
+          < VOLTAR
+        </div>
+        <div class="col-span-4 text-right">
+          {% block tela %}{% endblock %}
+        </div>
+      </div>
+					{% block main %}{% endblock %}
+		</main>
+      
+      </div>
+	</body>
+
+</html>

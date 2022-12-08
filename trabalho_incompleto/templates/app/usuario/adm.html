@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+
+{% block tela %} 
+<b>Espaço do administrador</b> 
+{% endblock %}
+
+{% block main %}
+
+<div class="bg-rose-600 p-5"> 
+  <div class="group flex items-center">
+    <h1 class="text-7xl">🧔🏽</h1>
+      <div class="ltr:ml-3 rtl:mr-3">
+          <p class="text-sm font-medium text-slate-300 text-white font-bold px-1">Olá, {NOME DO USÁRIO}</p>
+      </div>
+  </div>
+</div>
+<div class="text-5xl bg-blue-700 hover:bg-blue-600 m-5 h-50 w-70 rounded-lg">
+    <a href="/usuario/estacionamentoCadastrado">
+      <div class="group flex ">
+        <h1 class="text-5xl px-4 py-4">📋
+           <p class="text-xl font-larger text-white font-bold px-2 py-1">Estacionamentos Cadastrados</p>
+        </h1>
+      </div> 
+    </a>
+</div>
+<div class="text-5xl bg-amber-600 hover:bg-amber-500 m-5 h-50 w-70 rounded-lg">
+    <a href="/usuario/carteiraAdm">
+      <div class="group flex ">
+        <h1 class="text-5xl px-4 py-4">💼
+           <p class="text-xl font-larger text-white font-bold px-2 py-1">Carteira</p>
+        </h1>
+      </div> 
+    </a>
+</div>
+<div class="text-5xl bg-fuchsia-800 hover:bg-fuchsia-700 m-5 h-50 w-70 rounded-lg">
+  <a href="/usuario/reserva">
+    <div class="group flex ">
+      <h1 class="text-5xl px-4 py-4">✅
+        <p class="text-xl font-larger text-white font-bold px-2 py-1">Reservas
+      </h1>
+    </div>
+  </a>
+</div>
+
+{% endblock %}

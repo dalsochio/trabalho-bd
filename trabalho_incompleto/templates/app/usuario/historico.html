@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+
+{% block tela %} 
+<b>Histórico</b> 
+{% endblock %}
+{% block main %}
+<div class="bg-emerald-700">
+  <div class="grid grid-cols-4 gap-4">
+    <div>
+    <h1 class="text-7xl px-4 py-4">🔁
+     <p class="text-xl font-larger text-white font-bold px-3 py-2">Historico</p>
+    </h1>
+  </div>
+  </div>   
+</div>
+
+  <table class="md:table-fixed m-5 border-collapse border border-slate-500 ">
+  <thead>
+    <tr>
+      <th class="border border-slate-600">Endereço:</th>
+      <th class="border border-slate-600">Duração:</th>
+      <th class="border border-slate-600">Data:</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="border border-slate-600">Apenas para vê como vai ficar</td>
+      <td class="border border-slate-600">2h e 30m</td>
+      <td class="border border-slate-600">22/11/2022</td>
+    </tr>
+  </tbody>
+</table>
+
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block tela %} 
+<b>Informação do Usuário</b> 
+{% endblock %}
+
+{% block main %}
+
+
+ <div class="bg-blue-700">
+    <div>
+    <h1 class="text-7xl px-4 py-4">🧾
+       <p class="text-xl text-white font-bold px-4 py-4">Infomações do Usuário        </p>
+    </h1>
+  </div>   
+</div>
+<div class="text-5xl bg-slate-200 m-5 h-50 w-70 rounded-lg">
+   <div class="group flex ">
+      <div class="text-5xl px-4 py-4"> 
+        <div class="p-5"> 
+          <div class="ltr:ml-3 rtl:mr-3">
+              <ul class="list-insade">
+                <li class="text-xl font-medium text-slate-300 text-black font-bold px-1">Nome: {{ usuario.nome }}
+                </li>
+                <li class="text-xl font-medium text-slate-300 text-black font-bold px-1">CPF:{{ usuario.cpf }}
+                </li>
+                <li class="text-xl font-medium text-slate-300 text-black font-bold px-1">E-mail: {{ usuario.email}}
+                </li>
+                <li class="text-xl font-medium text-slate-300 text-black font-bold px-1">Contato: {{ usuario.contato }}
+                </li>
+                <li class="text-xl font-medium text-slate-300 text-black font-bold px-1">Veiculo: {{ usuario.veiculo }}
+                </li>
+            </ul>
+          </div>
+      </div>
+  <div>
+    <a href="/usuario/editarUsuario" class="rounded-full bg-blue-600 text-base text-white w-20 px-5 py-2"> Editar  </a>
+  </div>   
+</div>
+
+{% endblock %}

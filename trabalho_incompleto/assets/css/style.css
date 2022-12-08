@@ -1,0 +1,13 @@
+#tela {
+    background-color: white;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+    overflow-y: hidden;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+#logo:hover {
+  animation: bounce; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 1s; /* don't forget to set a duration! */
+}

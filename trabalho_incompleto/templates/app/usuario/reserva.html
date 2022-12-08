@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+
+
+{% block tela %} 
+<b>Reservas</b> 
+{% endblock %}
+{% block main %}
+<div class="bg-fuchsia-800">
+  <div class="grid grid-cols-1 gap-1">
+    <div>
+      <h1 class="text-7xl px-4 py-4">✅
+       <p class="text-xl font-larger text-white font-bold px-3 py-2">Reservas</p>
+      </h1>
+    </div>
+    <div class="bg-purple-400 hover:bg-purple-500 m-2 h-10 w-30 rounded-lg">
+      <a href="/usuario/reservaConfirmada">
+        <p class="text-white font-bold px-2 py-2">Confirmados
+       </p>  
+     </a>
+    </div>
+    <div class=" bg-purple-400 hover:bg-purple-500 m-2 h-10 w-30 rounded-lg">
+      <a href="/usuario/reservaRecusada">
+       <p class="text-white font-bold px-2 py-2">Recusadas
+       </p>
+      </a>
+    </div>
+    <div class=" bg-purple-400 hover:bg-purple-500 m-2 h-10 w-30 rounded-lg">
+      <a href="/usuario/reservaPendente">
+         <p class="text-white font-bold px-2 py-2">Pendentes
+         </p>
+      </a>
+    </div>
+  </div>
+</div>
+   
+{% endblock %}

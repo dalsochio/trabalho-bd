@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block tela %} 
+<b>Estacionamento</b> 
+{% endblock %}
+
+{% block main %}
+<div class="p-4 grid ">
+  <div class="text-center w-full h-30 text-gray-900  p-2 font-system-ui">
+    <h1 class="p-5 text-4xl font-bold	mt-2 text-gray-900 dark:text-white">{{estacionamento.nome}}</h1>
+  {% if reservou %}<div class="bg-green-700 text-white rounded w-full block h-[40px] mx-auto self-center py-2">Reservado!</div>{% endif %}
+  </div>
+  
+<div class="p-4 grid ">
+  <div class="text-center p-2 w-full h-30 bg-blue-200 text-gray-900 font-system-ui">
+    Endereço: {{estacionamento.endereco}}
+  </div>
+  
+  <div class="text-center p-2 w-full h-30 bg-blue-300 text-gray-900 font-system-ui">
+    {{estacionamento.vagas}} vagas Disponíveis
+  </div>
+  
+  <div class="text-center p-2 w-full h-30 bg-blue-400 text-gray-900  font-system-ui">
+    Valor de R${{estacionamento.preco|number_format(2, ',', '.')}} a hora
+  </div>
+  
+  <div class="text-center p-2 w-full h-30 bg-blue-500 text-gray-900  font-system-ui">
+    Extras:
+    {% for extra in estacionamento.extras|split(',') %}
+        <div class="border-1 border-gray-100 h-[20px] text-xs rounded py-0.5 px-2 uppercase font-semibold text-black">
+          {{ extra }}
+        </div>
+    {% endfor %}
+  </div>
+
+  <form method="post">
+    <input type="hidden" name="reservar">
+    <button class="mt-10 font-system-ui block mt-4 w-full text-gray-900 rounded border-y-1 border-orange-100 bg-orange-500 py-3 px-5 font-bold hover:bg-orange-600 hover:text-white text-gray-800" type="submit">
+      {% if reservou %}Cancelar{% else %} Reservar {% endif %} vaga
+    </button>
+  </form>
+
+  </div>
+    
+</div>
+{% endblock %}
